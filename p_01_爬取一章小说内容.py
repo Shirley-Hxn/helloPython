@@ -17,7 +17,7 @@ if __name__ == "__main__":
     url = 'http://www.biqikan.com/54/54638/23852196.html'
 
     req = requests.get(url, headers=header)  # 向目标网站发送 get 请求
-    # req.encoding = 'utf8'  # 防止乱码 → 为什么加了反而乱码了？
+    req.encoding = 'gbk'  # 防止乱码
     html = req.text
     div_bf = BeautifulSoup(html, 'html.parser')  # 创建对象，解析 html 信息
 
@@ -29,8 +29,9 @@ if __name__ == "__main__":
     # print(div_bf.select('.contentbox'))  # 通过类名查找
     # texts = div_bf.select('#htmllContent')  # 通过 id 名定位查找
     print(section_text)
-    # with open("第1章 头条影后（1）.txt", "wb") as f:
-        # f.write(section_text.encode('utf-8'))
+    s = str(section_text)
+    with open('第1章 头条影后（1）.txt', 'w', encoding='utf-8') as f:
+        f.write(s)
 
 
 print('task over ！')
