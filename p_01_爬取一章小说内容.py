@@ -26,6 +26,8 @@ if __name__ == "__main__":
     section_text = div_bf.select('.chapter_read .abstract #htmllContent')  # 按照父子关系细细划分
     # [0].text
 
+
+
     # print(div_bf.select('.contentbox'))  # 通过类名查找
     # texts = div_bf.select('#htmllContent')  # 通过 id 名定位查找
     print(section_text)
