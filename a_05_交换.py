@@ -13,7 +13,7 @@ b = 200
 
 
 # python 专用
-(a,b) = (b,a)
+(a, b) = (b, a)
 
 print(a)
 print(b)
